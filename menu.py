@@ -64,7 +64,7 @@ class menu:
         if self.N==self.size:
             print("Array overflow")
         else:
-            for i in range(index+1, self.N):
+            for i in range(self.N-1,index-1,-1):
                     self.arr[i+1] = self.arr[i]
             self.arr[index+1] = val   
             self.N = self.N+1
@@ -154,6 +154,8 @@ while(1):
     print("8. Delete values at the front")
     print("9. Delete values at a given index")
     print("10. Delete values after a given value")
+    print("11. Exit")
+    
 
 
     ch=int(input("Enter your choice : "))
@@ -189,3 +191,8 @@ while(1):
     elif(ch==10):
         giv_val = int(input("Enter the value after which you want to delete the element : "))
         p.delete_givval(giv_val)
+    elif(ch==11):
+        print("Exited successfully")
+        break
+    else:
+        print("Invalid input!!")
