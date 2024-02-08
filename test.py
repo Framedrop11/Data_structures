@@ -6,4 +6,9 @@ def transpose(arr):
         for l in range(len(arr[0])):
             trans[k][l] = arr[l][k]
     print(f"The transpose of the matrix \n{arr}\n is : \n{trans}")
+<<<<<<< HEAD
 transpose(arr)
+=======
+transpose(arr)
+
+>>>>>>> 69d58ea796a500f224fa22201d1de041ee6b0b6a

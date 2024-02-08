@@ -138,6 +138,7 @@ class menu:
             self.N-=1
         for i in range(0,self.N):
                 print(self.arr[i])
+<<<<<<< HEAD
                 
                 
                 
@@ -171,6 +172,8 @@ class menu:
 
 
 
+=======
+>>>>>>> 69d58ea796a500f224fa22201d1de041ee6b0b6a
 
 
 size = 10
@@ -187,9 +190,13 @@ while(1):
     print("8. Delete values at the front")
     print("9. Delete values at a given index")
     print("10. Delete values after a given value")
+<<<<<<< HEAD
     print("11. Bubble sort")
     print("12. insertion sort")
     print("13. Exit")
+=======
+    print("11. Exit")
+>>>>>>> 69d58ea796a500f224fa22201d1de041ee6b0b6a
     
 
 
@@ -227,6 +234,7 @@ while(1):
         giv_val = int(input("Enter the value after which you want to delete the element : "))
         p.delete_givval(giv_val)
     elif(ch==11):
+<<<<<<< HEAD
         p.bubble_sort()
     elif(ch==12):
         p.insertion_sort()
@@ -235,3 +243,9 @@ while(1):
         break
     else:
         print("Invalid input!!")
+=======
+        print("Exited successfully")
+        break
+    else:
+        print("Invalid input!!")
+>>>>>>> 69d58ea796a500f224fa22201d1de041ee6b0b6a
