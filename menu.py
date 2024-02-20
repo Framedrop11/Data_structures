@@ -138,7 +138,6 @@ class menu:
             self.N-=1
         for i in range(0,self.N):
                 print(self.arr[i])
-<<<<<<< HEAD
                 
                 
                 
@@ -159,27 +158,36 @@ class menu:
                 print(self.arr[i])
                 
     def insertion_sort(self):
-        for i in range(1,self.N-1):
-            key = self.arr[i]
-            j = i - 1
-            while j>0 and self.arr[j]>key:
-                self.arr[j+1]=self.arr[j]
-                j = j-1
-            self.arr[j+1] = key
+        for j in range(1,self.N):
+            key = self.arr[j]
+            i = j - 1
+            while i>=0 and self.arr[i]>key:
+                self.arr[i+1]=self.arr[i]
+                i = i-1
+            self.arr[i+1] = key
         for i in range(0,self.N):
                 print(self.arr[i])
-                    
+    def selection_sort(self):
+        for i in range(0,self.N-1):
+            min = i
+            for j in range(i+1,self.N):
+                if self.arr[j]<self.arr[min]:
+                    min = j
+            if self.arr[i]>self.arr[min]:
+                temp = self.arr[i]
+                self.arr[i] = self.arr[min]
+                self.arr[min] = temp
+        for i in range(0,self.N):
+                print(self.arr[i])
 
 
 
-=======
->>>>>>> 69d58ea796a500f224fa22201d1de041ee6b0b6a
 
 
 size = 10
 p = menu(size)
 while(1):
-
+    print("\n============Array Menu============\n")
     print("1. Print the elements in the array")
     print("2. Insert value at the end")
     print("3. Insert values at the front")
@@ -190,13 +198,10 @@ while(1):
     print("8. Delete values at the front")
     print("9. Delete values at a given index")
     print("10. Delete values after a given value")
-<<<<<<< HEAD
     print("11. Bubble sort")
-    print("12. insertion sort")
-    print("13. Exit")
-=======
-    print("11. Exit")
->>>>>>> 69d58ea796a500f224fa22201d1de041ee6b0b6a
+    print("12. Insertion sort")
+    print("13. Selection sort")
+    print("14. Exit")
     
 
 
@@ -234,18 +239,13 @@ while(1):
         giv_val = int(input("Enter the value after which you want to delete the element : "))
         p.delete_givval(giv_val)
     elif(ch==11):
-<<<<<<< HEAD
         p.bubble_sort()
     elif(ch==12):
         p.insertion_sort()
     elif(ch==13):
+        p.selection_sort()
+    elif(ch==14):
         print("Exited successfully")
         break
     else:
         print("Invalid input!!")
-=======
-        print("Exited successfully")
-        break
-    else:
-        print("Invalid input!!")
->>>>>>> 69d58ea796a500f224fa22201d1de041ee6b0b6a
