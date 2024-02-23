@@ -16,10 +16,10 @@ class menu:
         self.size = size
     def traverse(self):
         if self.N == 0:
-            print("Empty Array")
+            print("\nEmpty Array")
         else:
             for i in range(0,self.N):
-                print(self.arr[i])
+                print("\n",self.arr[i])
     def insert_front(self,val):
         if self.N==self.size:
             print("Array overflow")
@@ -29,8 +29,7 @@ class menu:
             self.arr[0]=val
             self.N=self.N+1
             print("Element inserted at the front")
-        for i in range(0,self.N):
-                print(self.arr[i])
+        self.traverse()
     def insert_end(self,val):
         if self.N==self.size:
             print("Array oveflow")
@@ -38,8 +37,7 @@ class menu:
             self.arr[self.N]=val
             self.N=self.N+1
             print("Element inserted at the end")
-        for i in range(0,self.N):
-                print(self.arr[i])
+        self.traverse()
     def insert_pos(self,val,pos):
         if self.N==self.size:
             print("Array overflow")
@@ -56,8 +54,7 @@ class menu:
                 self.arr[pos]=val
                 self.N=self.N+1
                 print("Element inserted at the given position")
-        for i in range(0,self.N):
-                print(self.arr[i])
+        self.traverse()
     def insert_after_value(self, giv_val, val):
         indices = np.where(self.arr == giv_val)
         index = indices[0][0]
@@ -69,8 +66,7 @@ class menu:
             self.arr[index+1] = val   
             self.N = self.N+1
             print("Value replaced successfully")
-        for i in range(0,self.N):
-                print(self.arr[i])
+        self.traverse()
     def search_val(self, val):
         indeces = np.where(self.arr == val)
         index = indeces[0]
@@ -105,8 +101,7 @@ class menu:
             print("Array underflow")
         else:
             self.N=self.N-1
-        for i in range(0,self.N):
-                print(self.arr[i])
+        self.traverse()
     def delete_front(self):
         if self.N==0:
             print("Array underflow")
@@ -114,8 +109,7 @@ class menu:
             for i in range(0,self.N-1):
                 self.arr[i]=self.arr[i+1]
             self.N=self.N-1
-        for i in range(0,self.N):
-                print(self.arr[i])
+        self.traverse()
     def delete_index(self,dex):
         if self.N==0:
             print("Array underflow")
@@ -124,8 +118,7 @@ class menu:
                 self.arr[i-1]=self.arr[i]
             np.delete(self.arr, dex)
             self.N-=1
-        for i in range(0,self.N):
-                print(self.arr[i])
+        self.traverse()
     def delete_givval(self,giv_val):
         indices = np.where(self.arr == giv_val)
         index = indices[0][0]
@@ -136,8 +129,7 @@ class menu:
                 self.arr[i-1]=self.arr[i]
             np.delete(self.arr, index+1)
             self.N-=1
-        for i in range(0,self.N):
-                print(self.arr[i])
+        self.traverse()
                 
                 
                 
@@ -154,8 +146,7 @@ class menu:
                     temp = self.arr[j+1]
                     self.arr[j+1] = self.arr[j]
                     self.arr[j] = temp
-        for i in range(0,self.N):
-                print(self.arr[i])
+        self.traverse()
                 
     def insertion_sort(self):
         for j in range(1,self.N):
@@ -165,8 +156,7 @@ class menu:
                 self.arr[i+1]=self.arr[i]
                 i = i-1
             self.arr[i+1] = key
-        for i in range(0,self.N):
-                print(self.arr[i])
+        self.traverse()
     def selection_sort(self):
         for i in range(0,self.N-1):
             min = i
@@ -177,8 +167,7 @@ class menu:
                 temp = self.arr[i]
                 self.arr[i] = self.arr[min]
                 self.arr[min] = temp
-        for i in range(0,self.N):
-                print(self.arr[i])
+        self.traverse()
 
 
 
@@ -205,12 +194,10 @@ while(1):
     
 
 
-    ch=int(input("Enter your choice : "))
+    ch=int(input("\nEnter your choice : "))
 
     if(ch==1):
-
         p.traverse()
-
     elif(ch==2):
         val = int(input("Enter your value : "))
         p.insert_end(val)
