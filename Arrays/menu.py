@@ -19,7 +19,7 @@ class menu:
             print("\nEmpty Array")
         else:
             for i in range(0,self.N):
-                print("\n",self.arr[i])
+                print(self.arr[i])
     def insert_front(self,val):
         if self.N==self.size:
             print("Array overflow")
@@ -61,8 +61,8 @@ class menu:
         if self.N==self.size:
             print("Array overflow")
         else:
-            for i in range(self.N-1,index-1,-1):
-                    self.arr[i+1] = self.arr[i]
+            for i in range(self.N-1,index,-1):
+                self.arr[i+1] = self.arr[i]
             self.arr[index+1] = val   
             self.N = self.N+1
             print("Value replaced successfully")
@@ -101,6 +101,7 @@ class menu:
             print("Array underflow")
         else:
             self.N=self.N-1
+            print("Element deleted at end")
         self.traverse()
     def delete_front(self):
         if self.N==0:
@@ -109,6 +110,7 @@ class menu:
             for i in range(0,self.N-1):
                 self.arr[i]=self.arr[i+1]
             self.N=self.N-1
+            print("Element deleted at front")
         self.traverse()
     def delete_index(self,dex):
         if self.N==0:
@@ -116,7 +118,7 @@ class menu:
         else: 
             for i in range(dex+1,self.N):
                 self.arr[i-1]=self.arr[i]
-            np.delete(self.arr, dex)
+            print("Element deleted at index")
             self.N-=1
         self.traverse()
     def delete_givval(self,giv_val):
@@ -129,6 +131,7 @@ class menu:
                 self.arr[i-1]=self.arr[i]
             np.delete(self.arr, index+1)
             self.N-=1
+            print("Element deleted")
         self.traverse()
                 
                 
@@ -157,6 +160,7 @@ class menu:
                 i = i-1
             self.arr[i+1] = key
         self.traverse()
+        
     def selection_sort(self):
         for i in range(0,self.N-1):
             min = i
@@ -182,7 +186,7 @@ while(1):
     print("3. Insert values at the front")
     print("4. Insert values at a position")
     print("5. Insert values at a given value")
-    print("6. Search values in array (Binary search)")
+    print("6. Search values in array")
     print("7. Delete values at the end")
     print("8. Delete values at the front")
     print("9. Delete values at a given index")
