@@ -182,7 +182,7 @@ while(1):
     print("3. Insert values at the front")
     print("4. Insert values at a position")
     print("5. Insert values at a given value")
-    print("6. Search values in array")
+    print("6. Search values in array (Binary search)")
     print("7. Delete values at the end")
     print("8. Delete values at the front")
     print("9. Delete values at a given index")
