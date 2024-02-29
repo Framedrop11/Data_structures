@@ -129,7 +129,6 @@ class menu:
         else:
             for i in range(index+2,self.N):
                 self.arr[i-1]=self.arr[i]
-            np.delete(self.arr, index+1)
             self.N-=1
             print("Element deleted")
         self.traverse()
@@ -150,7 +149,6 @@ class menu:
                     self.arr[j+1] = self.arr[j]
                     self.arr[j] = temp
         self.traverse()
-                
     def insertion_sort(self):
         for j in range(1,self.N):
             key = self.arr[j]
@@ -160,7 +158,6 @@ class menu:
                 i = i-1
             self.arr[i+1] = key
         self.traverse()
-        
     def selection_sort(self):
         for i in range(0,self.N-1):
             min = i
