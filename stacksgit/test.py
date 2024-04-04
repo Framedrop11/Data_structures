@@ -8,6 +8,7 @@ class stacks():
         if self.top == -1:
             print("\nEmpty Stack")
         else:
+            print("\nElements in the stack are : ")
             for i in range(self.top,-1,-1):
                 print(self.arr[i])
     def push(self,val):
@@ -27,7 +28,7 @@ class stacks():
         if self.top == -1:
             print("Stack is empty")
         else:
-            print(f"The topmost element is : {self.arr[self.top]}")
+            print(f"\nThe topmost element is : {self.arr[self.top]}")
     
             
         
@@ -47,7 +48,7 @@ while(1):
     ch=int(input("\nEnter your choice : "))
 
     if(ch==1):
-        val = int(input("Enter your value : "))
+        val = int(input("\nEnter your value : "))
         sobj.push(val)
     elif(ch==2):
         sobj.pop()
